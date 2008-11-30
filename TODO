@@ -1,0 +1,15 @@
+TODO:
+
+- Fix RfeedfinderSlice.description and RfeedfinderSlice.version
+- Fix LICENSE with your name
+- Fix Rakefile with your name and contact info
+- Add your code to lib/rfeedfinder-slice.rb
+- Add your Merb rake tasks to lib/rfeedfinder-slice/merbtasks.rb
+
+Remove anything that you don't need:
+
+- app/controllers/main.rb RfeedfinderSlice::Main controller
+- app/views/layout/rfeedfinder-slice.html.erb
+- spec/controllers/main_spec.rb controller specs
+- public/* any public files
+- stubs/* any stub files

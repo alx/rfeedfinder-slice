@@ -1,0 +1,28 @@
+<strong><%= slice.description %></strong> (v. <%= slice.version %>)
+
+<form action="/" method="post" accept-charset="utf-8">
+	<p>
+		<label for="website_url">Website URL:</label><br>
+		<input type="text" name="website_url" value="" id="website_url">
+	</p>
+	<p><input type="submit" value="Show feed url &rarr;"></p>
+</form>
+
+<% if @feed_requested %>
+	<p>Feed link requested for <a href="<%= @feed_requested %>"><%= @feed_requested %></a></p>
+<% end %>
+
+<% if @feeds %>
+	<% if @feeds.size == 0 %>
+	<p>No feed found</p>
+	<% elsif @feeds.size == 1 %>
+	<p>Feed url: <a href="<%= @feeds.first %>"><%= @feeds.first %></a></p>
+	<% else %>
+	<p>Feeds url: 
+		<ul>
+		<% @feeds.each do |feed| %>
+			<li><a href="<%= feed %>"><%= feed %></a><li>
+		<% end %>
+		</ul>
+	<% end %>
+<% end %>
